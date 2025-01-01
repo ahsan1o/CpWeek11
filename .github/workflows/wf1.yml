@@ -1,0 +1,21 @@
+name: workflow practice
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  build_pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: message displaying
+       run: echo "builded first pipeline"
+
+     - name: coping to branch
+       uses: actions/checkout@v4 
+
