@@ -1,9 +1,6 @@
 name: workflow practice
 
 on: 
-  push:
-    branches:
-      - '**'
   pull_request:
     branches:
       - main 
