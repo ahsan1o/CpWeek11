@@ -21,6 +21,6 @@ jobs:
      
      - name: displaying details 
        run: |
-         echo "the name of the event ${{github.event}}"
+         echo "the name of the event ${{github.event_name}}"
          git reflog
 
