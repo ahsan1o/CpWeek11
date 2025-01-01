@@ -18,4 +18,9 @@ jobs:
 
      - name: coping to branch
        uses: actions/checkout@v4 
+     
+     - name: displaying details 
+       run: |
+         echo "the name of the event ${{github.event}}"
+         git reflog
 
