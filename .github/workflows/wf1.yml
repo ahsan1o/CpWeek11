@@ -3,13 +3,13 @@ name: workflow practice
 on: 
   push:
     branches:
-      - '**'
+      - develop
   pull_request:
     branches:
-      - main 
+      - develop 
 
 jobs:
-  build_pipeline:
+  linting_job:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,4 +23,9 @@ jobs:
        run: |
          echo "the name of the event ${{github.event_name}}"
          git reflog
-
+     - name: installing Html linting_job
+       run: npm install --save-dev htmlhint
+     - name: running npx
+       run: npx htmlhint "**/*.html"
+       
+       
